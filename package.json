@@ -1,0 +1,53 @@
+{
+  "name": "@miti/sdk",
+  "version": "1.0.0",
+  "description": "Types and build tools for MITI widgets: panels that are imported into MITI as .miti-widget files",
+  "license": "MIT",
+  "author": "MITI Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiran-t/MITI-sdk.git"
+  },
+  "type": "module",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "bin": {
+    "miti-widget": "bin/miti-widget.mjs"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "tsc -p test && node --test test/",
+    "check-miti": "node scripts/check-miti.mjs"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.12",
+    "fflate": "^0.8.3"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "lucide-react": "^0.300.0",
+    "react": "^18.3.1",
+    "typescript": "^5.9.3"
+  }
+}

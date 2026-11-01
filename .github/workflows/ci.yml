@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Types and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
+
+  miti:
+    name: MITI provides the SDK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # The MITI to check against: the repository variable MITI_REF (a branch or tag), else main.
+      - uses: actions/checkout@v7
+        with:
+          repository: hiran-t/MITI
+          ref: ${{ vars.MITI_REF || 'main' }}
+          path: MITI
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+        working-directory: MITI
+      - run: node scripts/check-miti.mjs MITI

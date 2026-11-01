@@ -1,0 +1,4 @@
+node_modules/
+test/fixture/dist/
+*.miti-widget
+.DS_Store

@@ -1,0 +1,6 @@
+{
+  "id": "test.fixture",
+  "name": "Fixture",
+  "version": "0.1.0",
+  "miti": { "apiVersion": 1 }
+}
