@@ -2,7 +2,7 @@
 
 Types and build tools for **MITI widgets**: panels that are imported into [MITI](https://github.com/hiran-t/MITI) as one `.miti-widget` file, with no change to MITI itself. A widget is written in TypeScript and React against `@miti/sdk`, and talks to the robot through foxglove_bridge like MITI's own panels.
 
-To start a widget, use the template [MITI-widget-dev](https://github.com/hiran-t/MITI-widget-dev). This repository is what it depends on:
+Widgets built with it run in MITI 3.4.0 and newer. To start a widget, use the template [MITI-widget-dev](https://github.com/hiran-t/MITI-widget-dev). This repository is what it depends on:
 
 | Part                     | What it is                                                                                                               |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -16,7 +16,7 @@ To start a widget, use the template [MITI-widget-dev](https://github.com/hiran-t
 In a widget's folder:
 
 ```bash
-npm install --save-dev "@miti/sdk@github:hiran-t/MITI-sdk" react @types/react typescript
+npm install --save-dev "@miti/sdk@git+https://github.com/hiran-t/MITI-sdk.git#semver:^1.0.0" react @types/react typescript
 ```
 
 `react` and `@types/react` are for types and for packages that expect React; the widget uses the React MITI runs.
