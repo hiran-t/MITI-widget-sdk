@@ -29,7 +29,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "tsc -p test && node --test test/",
+    "test": "tsc -p test && node --test test/*.test.mjs",
     "check-miti": "node scripts/check-miti.mjs"
   },
   "dependencies": {
