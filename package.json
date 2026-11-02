@@ -6,7 +6,7 @@
   "author": "MITI Contributors",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hiran-t/MITI-sdk.git"
+    "url": "git+https://github.com/hiran-t/MITI-widget-sdk.git"
   },
   "type": "module",
   "types": "./index.d.ts",
