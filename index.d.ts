@@ -13,7 +13,7 @@ export declare const API_VERSION: 1;
 
 // ─── The robot connection ────────────────────────────────────────────────────────────────────────
 
-/** A topic foxglove_bridge offers. */
+/** A topic the bridge offers. */
 export interface TopicInfo {
   topic: string;
   /** Message type, e.g. `sensor_msgs/msg/Image`. */
@@ -29,7 +29,7 @@ export interface SubscribeOptions {
   throttleMs?: number;
 }
 
-/** The connection to foxglove_bridge that a panel is given. */
+/** The connection to the bridge that a panel is given. */
 export interface MitiClient {
   /** Call `callback` with each decoded message of `topic`; prefer `useTopic` in components. */
   subscribe(
@@ -69,7 +69,7 @@ export interface PanelProps<Config = unknown> {
   updateConfig: (patch: Partial<Config>) => void;
   /** Replace the settings. */
   setConfig: (config: Config) => void;
-  /** The connection to foxglove_bridge, or null while MITI is not connected. */
+  /** The connection to the bridge, or null while MITI is not connected. */
   client: MitiClient | null;
   topics: TopicInfo[];
   topicsLoading: boolean;
