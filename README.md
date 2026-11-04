@@ -19,7 +19,7 @@ In a widget's folder:
 npm install --save-dev "@miti/sdk@git+https://github.com/hiran-t/MITI-widget-sdk.git#semver:^1.0.0" react @types/react typescript
 ```
 
-`react` and `@types/react` are for types and for packages that expect React; the widget uses the React MITI runs.
+`react` and `@types/react` are for types and for packages that expect React; the widget uses the React MITI runs: React 19 from MITI 3.4.4, React 18 before. `@types/react` 18 and 19 both work.
 
 ## Build a widget
 
